@@ -51,13 +51,13 @@ Run `npm run build` to create the frontend bundle in `dist/`. `npm start` starts
 
 This project includes a GitHub Actions Pages workflow and a Render Blueprint for the Express API. GitHub Pages hosts static files only; it cannot run the Express server.
 
-1. Create a GitHub repository named `keyspace-jwt-auth` and push this project to its `main` branch.
+1. Use the GitHub repository `prateek2302/prateekjain_task36` and push changes to its `main` branch.
 2. In the repository, open **Settings → Pages** and select **GitHub Actions** as the build and deployment source.
 3. In Render, create a new Blueprint from the repository and apply `render.yaml`. Render generates a `JWT_SECRET`, exposes a health check, and restricts browser API access to this project’s Pages origin.
 4. Copy the API service’s public URL from Render. In GitHub, open **Settings → Secrets and variables → Actions → Variables**, create `VITE_API_BASE_URL`, and set its value to that URL (for example, `https://keyspace-jwt-api.onrender.com`, without a trailing slash).
 5. Re-run the **Deploy frontend to GitHub Pages** workflow from the repository’s **Actions** tab. Future pushes to `main` deploy automatically.
 
-The Pages site is `https://prateek2302.github.io/keyspace-jwt-auth/`. The first Render Blueprint setup requires your Render account to authorize access to the GitHub repository. Render’s free service may sleep when idle; its first request after sleeping can take a short time.
+The Pages site is `https://prateek2302.github.io/prateekjain_task36/`. The first Render Blueprint setup requires your Render account to authorize access to the GitHub repository. Render’s free service may sleep when idle; its first request after sleeping can take a short time.
 
 ## Demo limitations
 

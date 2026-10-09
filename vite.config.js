@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: process.env.GITHUB_ACTIONS ? "/keyspace-jwt-auth/" : "/",
+  base: process.env.GITHUB_ACTIONS ? "/prateekjain_task36/" : "/",
   server: {
     proxy: {
       "/register": "http://localhost:4000",
