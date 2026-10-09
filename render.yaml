@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: keyspace-jwt-api
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /protected
+    plan: free
+    envVars:
+      - key: JWT_SECRET
+        generateValue: true
+      - key: FRONTEND_ORIGIN
+        value: https://prateek2302.github.io
