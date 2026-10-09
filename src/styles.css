@@ -23,6 +23,7 @@ button { cursor: pointer; }
 .topbar-right { display: flex; gap: 27px; align-items: center; font-size: 12px; font-weight: 600; }
 .api-status, .help-link { display: flex; align-items: center; gap: 8px; color: #778195; }
 .status-dot, .secure-label > span { width: 7px; height: 7px; background: #4ab987; border-radius: 50%; display: inline-block; box-shadow: 0 0 0 3px #4ab9871c; }
+.api-status.api-unconfigured .status-dot { background: #e8a849; box-shadow: 0 0 0 3px #e8a84924; }
 .help-link { padding: 0; border: 0; background: transparent; }
 .layout { flex: 1; min-height: 610px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 8.2%; padding: 52px 6.5% 62px; }
 .intro-panel { position: relative; padding: 4px 0; }

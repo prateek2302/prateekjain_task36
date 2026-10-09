@@ -137,7 +137,7 @@ export default function App() {
           <span>keyspace<span className="brand-period">.</span></span>
         </a>
         <div className="topbar-right">
-          <span className="api-status"><span className="status-dot" /> API ready</span>
+          <span className={`api-status ${API_BASE_URL ? "" : "api-unconfigured"}`}><span className="status-dot" /> {API_BASE_URL ? "API configured" : "API setup needed"}</span>
           <button className="help-link" type="button" onClick={() => showMessage("Create an account, sign in, then open your private space to verify the JWT-protected route.", "info")}>
             <CircleHelp size={16} /> Help
           </button>

@@ -37,6 +37,7 @@ The Vite development server proxies `/register`, `/login`, and `/protected` to t
 | Method | Route | Description |
 | --- | --- | --- |
 | `POST` | `/register` | Create an account with `{ "username": "...", "password": "..." }` |
+| `GET` | `/health` | Health check for the deployed API |
 | `POST` | `/login` | Validate credentials and return a signed JWT |
 | `GET` | `/protected` | Return private data when sent `Authorization: Bearer <token>` |
 
@@ -52,7 +53,7 @@ This project includes a GitHub Actions Pages workflow and a Render Blueprint for
 
 1. Create a GitHub repository named `keyspace-jwt-auth` and push this project to its `main` branch.
 2. In the repository, open **Settings → Pages** and select **GitHub Actions** as the build and deployment source.
-3. In Render, create a new Blueprint from the repository and apply `render.yaml`. Render generates a `JWT_SECRET` and restricts browser API access to this project’s Pages origin.
+3. In Render, create a new Blueprint from the repository and apply `render.yaml`. Render generates a `JWT_SECRET`, exposes a health check, and restricts browser API access to this project’s Pages origin.
 4. Copy the API service’s public URL from Render. In GitHub, open **Settings → Secrets and variables → Actions → Variables**, create `VITE_API_BASE_URL`, and set its value to that URL (for example, `https://keyspace-jwt-api.onrender.com`, without a trailing slash).
 5. Re-run the **Deploy frontend to GitHub Pages** workflow from the repository’s **Actions** tab. Future pushes to `main` deploy automatically.
 

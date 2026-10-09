@@ -30,6 +30,10 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get("/health", (req, res) => {
+  return res.json({ status: "ok" });
+});
+
 function validateCredentials(req, res, next) {
   const { username, password } = req.body || {};
 
